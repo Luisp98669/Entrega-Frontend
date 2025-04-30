@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.dashboard-container {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 60px 1fr 50px;
+    grid-template-areas:
+        "top-nav top-nav"
+        "side-nav main-content"
+        "footer footer";
+    height: 100vh;
+}
+
+.top-nav {
+    grid-area: top-nav;
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.top-nav .logo {
+    font-size: 1.5em;
+}
+
+.top-nav .user-info {
+    display: flex;
+    align-items: center;
+}
+
+.top-nav .user-info span {
+    margin-right: 20px;
+}
+
+.top-nav .user-info a {
+    color: white;
+    text-decoration: none;
+}
+
+.top-nav .user-info a:hover {
+    text-decoration: underline;
+}
+
+.side-nav {
+    grid-area: side-nav;
+    background-color: #444;
+    color: white;
+    padding-top: 20px;
+}
+
+.side-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.side-nav li {
+    padding: 10px;
+}
+
+.side-nav li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+}
+
+.side-nav li a:hover {
+    background-color: #555;
+}
+
+.main-content {
+    grid-area: main-content;
+    padding: 20px;
+    background-color: white;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
